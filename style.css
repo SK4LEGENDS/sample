@@ -1,0 +1,200 @@
+/* Global Styles */
+body {
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000000; /* Dark background */
+  color: #ffffff; /* White text */
+}
+
+/* Sticky Header */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(45deg, #2a2a2a, #1c1c1c); /* Gradient for depth */
+  color: #ffffff;
+  padding: 20px 0;
+  z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  font-family: "Space Grotesk", sans-serif;
+  text-align: center;
+  border-bottom: 4px solid #f97316; /* Orange bottom border */
+}
+
+/* Navigation links */
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 10px;
+}
+
+header nav a {
+  color: #f97316; /* Primary orange color */
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 12px 25px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+header nav a:hover {
+  transform: scale(1.1); /* Slight scaling on hover */
+  background-color: #f97316;
+  color: #0a0a0a; /* Dark background on hover */
+}
+
+/* Contact button with Mail logo (right side) */
+header .contact-btn {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px 20px;
+  background-color: #f97316;
+  color: #ffffff;
+  font-size: 18px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Shadow for button */
+  transition: all 0.3s ease;
+}
+
+header .contact-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+footer {
+  background: linear-gradient(45deg, #2a2a2a, #1c1c1c);
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  z-index: 1000;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+  font-family: "Space Grotesk", sans-serif;
+  border-top: 4px solid #f97316;
+}
+
+/* Footer logo and text on the left */
+footer .footer-left {
+  float: left;
+  padding-left: 20px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Footer social icons on the right */
+footer .footer-right {
+  float: right;
+  padding-right: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.footer-right img {
+  filter: brightness(0) saturate(100%) invert(59%) sepia(91%) saturate(2754%)
+    hue-rotate(359deg) brightness(100%) contrast(104%);
+  transition: transform 0.3s ease;
+}
+
+.footer-right a:hover img {
+  transform: scale(1.1);
+}
+
+/* Icons stay orange all the time */
+footer .footer-right a {
+  color: #f97316; /* Orange color for icons */
+  transition: transform 0.3s ease;
+}
+
+/* Remove hover effect, icons stay orange */
+footer .footer-right a:hover {
+  transform: scale(1.1); /* Slight scaling on hover */
+  color: #f97316; /* Ensuring orange stays the same on hover */
+}
+
+/* Make sure footer content stays in place */
+footer::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* General Container for Content */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 20px;
+  width: 1300px;
+}
+
+/* Left Side - Text and Typing Animation */
+.left-side {
+  width: 45%;
+  color: white;
+}
+
+.left-side h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.left-side h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f97316; /* Orange color for the dynamic text */
+  margin-top: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #f97316; /* Typing cursor effect */
+  padding-right: 10px;
+}
+
+.left-side p {
+  margin-top: 30px;
+  font-size: 1.2rem;
+  color: #b3b3b3;
+}
+
+/* Right Side - Profile Picture */
+
+/* Right Side - Profile Picture */
+.right-side {
+  width: 45%;
+  text-align: center;
+}
+
+.right-side img {
+  width: 80%;
+  max-width: 300px;
+  border-top-right-radius: 50%; /* More curve on the top-right corner */
+  border-radius: 15px; /* Slightly curved corners on all sides */
+  border: 5px solid #f97316; /* Orange border around the profile picture */
+}
+
+html,
+body {
+  height: 95%;
+}
+
+.page-wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-wrapper > main {
+  flex: 1;
+}

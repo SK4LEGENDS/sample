@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="/style.css" />
+    <!-- Link to external CSS -->
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- Header -->
+      <header>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <!-- Contact button with mail logo -->
+        <a href="mailto:your.email@example.com" class="contact-btn">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/561/561127.png"
+            alt="Mail Icon"
+          />
+          Contact
+        </a>
+      </header>
+
+      <!-- Content Section -->
+      <main>
+        <!-- Your portfolio content goes here -->
+        <!-- Content Section -->
+        <main>
+          <section id="home" class="intro">
+            <div class="container">
+              <!-- Left Side -->
+              <div class="left-side">
+                <h1>I am a</h1>
+                <h2 id="typing"></h2>
+                <p>
+                  As an automation developer, I craft intelligent systems to
+                  streamline processes and enhance productivity. With a keen eye
+                  for detail, I also engineer prompts that bridge human
+                  creativity and machine learning. My passion for photography
+                  lets me capture the beauty in the world around me, telling
+                  stories through each frame..
+                </p>
+              </div>
+
+              <!-- Right Side: Profile Picture -->
+              <div class="right-side">
+                <img src="/profile.jpg" alt="Profile Picture" />
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <!-- JavaScript for typing animation -->
+        <script>
+          const words = [
+            "Automation Developer",
+            "Prompt Engineer",
+            "Photographer",
+          ];
+          let i = 0;
+          let j = 0;
+          let currentWord = "";
+          let typingSpeed = 100;
+          let deletingSpeed = 50;
+
+          function type() {
+            if (j < words[i].length) {
+              currentWord += words[i][j];
+              document.getElementById("typing").innerText = currentWord;
+              j++;
+              setTimeout(type, typingSpeed);
+            } else {
+              setTimeout(deleteText, 1500); // Pause before starting to delete
+            }
+          }
+
+          function deleteText() {
+            if (j > 0) {
+              currentWord = currentWord.slice(0, -1);
+              document.getElementById("typing").innerText = currentWord;
+              j--;
+              setTimeout(deleteText, deletingSpeed);
+            } else {
+              i = (i + 1) % words.length; // Cycle through the words
+              setTimeout(type, 500); // Pause before typing the next word
+            }
+          }
+
+          // Start the typing animation
+          type();
+        </script>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-left">ⓒ All rights reserved, Kailash Selvarajan</div>
+        <div class="footer-right">
+          <a href="#"
+            ><img
+              src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png"
+              alt="Instagram"
+              width="24"
+              height="24"
+          /></a>
+          <a href="#"
+            ><img
+              src="https://cdn-icons-png.flaticon.com/512/733/733553.png"
+              alt="GitHub"
+              width="24"
+              height="24"
+          /></a>
+          <a href="#"
+            ><img
+              src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+              alt="LinkedIn"
+              width="24"
+              height="24"
+          /></a>
+          <a href="mailto:your.email@example.com"
+            ><img
+              src="https://cdn-icons-png.flaticon.com/512/561/561127.png"
+              alt="Mail"
+              width="24"
+              height="24"
+          /></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
